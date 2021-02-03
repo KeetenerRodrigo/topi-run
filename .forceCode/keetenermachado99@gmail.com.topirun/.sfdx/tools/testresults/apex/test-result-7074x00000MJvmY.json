@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 0,
+    "skipped": 1,
+    "passRate": "0%",
+    "failRate": "0%",
+    "skipRate": "100%",
+    "testStartTime": "Wed Feb 03 2021 15:02:06",
+    "testExecutionTimeInMs": 0,
+    "testTotalTimeInMs": 0,
+    "commandTimeInMs": 1579,
+    "hostname": "https://teste-2e-dev-ed.my.salesforce.com",
+    "orgId": "00D4x000006t3w2EAA",
+    "username": "keetenermachado99@gmail.com.topirun",
+    "testRunId": "7074x00000MJvmY",
+    "userId": "0054x000003O4X6AAK"
+  },
+  "tests": [
+    {
+      "id": "07M4x000000XONKEA4",
+      "queueItemId": "7094x000000NSqxAAG",
+      "stackTrace": null,
+      "message": "O método filterByChangedDocumentNumberTest não existe na classe do Apex com o ID:01p4x00000Kah3h",
+      "asyncApexJobId": "7074x00000MJvmYAAT",
+      "methodName": "filterByChangedDocumentNumberTest",
+      "outcome": "Skip",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p4x00000Kah3hAAB",
+        "name": "AccountFilterTest",
+        "namespacePrefix": null,
+        "fullName": "AccountFilterTest"
+      },
+      "runTime": 0,
+      "testTimestamp": "2021-02-03T18:02:07.000+0000",
+      "fullName": "AccountFilterTest.filterByChangedDocumentNumberTest"
+    }
+  ]
+}

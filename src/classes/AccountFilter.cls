@@ -3,6 +3,8 @@
  */
 
 public virtual class AccountFilter {
+
+    virtual
     public List<Account> filterByChangedDocumentNumber(List<Account> newAccounts, Map<Id,Account> oldAccounts) {
  
         List<Account> filteredAccounts = new List<Account>();

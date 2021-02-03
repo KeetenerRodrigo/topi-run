@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Wed Feb 03 2021 16:18:36",
+    "testExecutionTimeInMs": 239,
+    "testTotalTimeInMs": 239,
+    "commandTimeInMs": 2029,
+    "hostname": "https://teste-2e-dev-ed.my.salesforce.com",
+    "orgId": "00D4x000006t3w2EAA",
+    "username": "keetenermachado99@gmail.com.topirun",
+    "testRunId": "7074x00000MKNGr",
+    "userId": "0054x000003O4X6AAK"
+  },
+  "tests": [
+    {
+      "id": "07M4x000000XP9YEAW",
+      "queueItemId": "7094x000000NSz7AAG",
+      "stackTrace": "Class.AccountFilterTest.filterByChangedDocumentNumberTest: line 14, column 1",
+      "message": "System.DmlException: Insert failed. First exception on row 0; first error: CANNOT_INSERT_UPDATE_ACTIVATE_ENTITY, Account: execution of BeforeInsert\n\ncaused by: System.TypeException: Invalid integer: .\n\nClass.BrazilianDocumentValidator.calculateDigitCNPJ: line 48, column 1\nClass.BrazilianDocumentValidator.isCNPJ: line 19, column 1\nClass.AccountValidator.validateDocumentNumber: line 12, column 1\nClass.AccountTH.validateDocumentNumber: line 56, column 1\nClass.AccountTH.beforeInsert: line 28, column 1\nClass.TriggerHandler.run: line 46, column 1\nTrigger.Account: line 6, column 1: []",
+      "asyncApexJobId": "7074x00000MKNGrAAP",
+      "methodName": "filterByChangedDocumentNumberTest",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p4x00000Kah3hAAB",
+        "name": "AccountFilterTest",
+        "namespacePrefix": null,
+        "fullName": "AccountFilterTest"
+      },
+      "runTime": 239,
+      "testTimestamp": "2021-02-03T19:18:36.000+0000",
+      "fullName": "AccountFilterTest.filterByChangedDocumentNumberTest"
+    }
+  ]
+}

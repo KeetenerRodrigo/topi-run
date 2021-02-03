@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 1,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Wed Feb 03 2021 16:28:31",
+    "testExecutionTimeInMs": 137,
+    "testTotalTimeInMs": 137,
+    "commandTimeInMs": 1445,
+    "hostname": "https://teste-2e-dev-ed.my.salesforce.com",
+    "orgId": "00D4x000006t3w2EAA",
+    "username": "keetenermachado99@gmail.com.topirun",
+    "testRunId": "7074x00000MKQCg",
+    "userId": "0054x000003O4X6AAK"
+  },
+  "tests": [
+    {
+      "id": "07M4x000000XPGZEA4",
+      "queueItemId": "7094x000000NSzbAAG",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7074x00000MKQCgAAP",
+      "methodName": "filterByChangedDocumentNumberTest",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p4x00000Kah3hAAB",
+        "name": "AccountFilterTest",
+        "namespacePrefix": null,
+        "fullName": "AccountFilterTest"
+      },
+      "runTime": 137,
+      "testTimestamp": "2021-02-03T19:28:31.000+0000",
+      "fullName": "AccountFilterTest.filterByChangedDocumentNumberTest"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 0,
+    "passing": 0,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Wed Feb 03 2021 14:37:48",
+    "testExecutionTimeInMs": 0,
+    "testTotalTimeInMs": 0,
+    "commandTimeInMs": 4252,
+    "hostname": "https://teste-2e-dev-ed.my.salesforce.com",
+    "orgId": "00D4x000006t3w2EAA",
+    "username": "keetenermachado99@gmail.com.topirun",
+    "testRunId": "7074x00000MJtkh",
+    "userId": "0054x000003O4X6AAK"
+  },
+  "tests": []
+}
