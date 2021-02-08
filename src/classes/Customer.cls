@@ -1,7 +1,6 @@
 /**
-* @author Keetener Rodrigo
-*/
-
+ * @author Keetener Rodrigo
+ */
 public virtual class Customer {
 
     Decimal amount;

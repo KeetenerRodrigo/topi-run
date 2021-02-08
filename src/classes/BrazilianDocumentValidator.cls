@@ -1,7 +1,6 @@
 /**
-* @author: ercarval - topi
-*/
-
+ * @author Keetener Rodrigo
+ */
 public virtual class BrazilianDocumentValidator {
     
     /**

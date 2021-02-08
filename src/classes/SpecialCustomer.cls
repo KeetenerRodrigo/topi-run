@@ -1,7 +1,6 @@
 /**
-* @author Keetener Rodrigo
-*/
-
+ * @author Keetener Rodrigo
+ */
 public class SpecialCustomer extends Customer implements Notificable {
 
     override

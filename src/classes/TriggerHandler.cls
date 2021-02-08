@@ -1,7 +1,6 @@
 /**
-* @author https://github.com/kevinohara80/sfdc-trigger-framework/
-*/
-
+ * @author https://github.com/kevinohara80/sfdc-trigger-framework/
+ */
 public virtual class TriggerHandler {
 
   // static map of handlername, times run() was invoked

@@ -1,7 +1,6 @@
 /**
  * @author Keetener Rodrigo
  */
-
 public virtual class AccountFilter {
 
     virtual

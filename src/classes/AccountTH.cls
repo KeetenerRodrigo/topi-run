@@ -1,7 +1,6 @@
 /**
 * @author Keetener Rodrigo
 */
-
 public virtual class AccountTH extends TriggerHandler { 
     
     List<Account> newAccounts;
