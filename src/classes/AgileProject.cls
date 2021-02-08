@@ -3,9 +3,11 @@
  */
 global class AgileProject {
 
+    public String externalId;
     public String name;
     public Date startDate;
     public Date endDate;
+
     public List<Sprint> sprints;
 
     public class Sprint {
