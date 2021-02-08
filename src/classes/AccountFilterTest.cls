@@ -6,10 +6,11 @@ public class AccountFilterTest {
     
     @isTest
     static void filterByChangedDocumentNumberTest (){
-       List<Account> accounts = new List<Account>();
-        accounts.add(AccountFixtureFactory.newAccount('Teste 01', '40078569826'));
-        accounts.add(AccountFixtureFactory.newAccount('Teste 02', '07285635090'));
-        insert accounts;
+        Map<String,SObject> records = AccountFixtureFactory.createIntegratedScenario();
+        Account account = records.get('account');
+
+        List<Account> accounts = new List<Account>();
+        accounts.add(account);
 
         AccountFilter filter = new AccountFilter();
 
