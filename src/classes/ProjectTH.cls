@@ -26,14 +26,11 @@ public class ProjectTH extends TriggerHandler {
     }
     
     public void sendProjectsToLegacySystem () {
-        
         List<Project__c> filteredProjects = this.filter.filterByChangedStatus(newProjects, oldProjects);
         
-        if (filteredProjects.isEmpty()){
-            return;  
-        }                                                                              
-
-        SendProjectAsync.sendProject(this.filter.convertSObjetList(filteredProjects, 'Id'));
+        if (!filteredProjects.isEmpty()){
+            SendProjectAsync.sendProject(this.filter.convertSObjetList(filteredProjects, 'Id'));
+        } 
     } 
 
 }

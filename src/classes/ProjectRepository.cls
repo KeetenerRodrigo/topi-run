@@ -48,9 +48,17 @@ public class ProjectRepository {
     }
 
     public List<Project__c> findByIds (List<String> ids) {
-        return [ SELECT Id, StartDate__c, EndDate__c, Budget__c , ErrorMessage__c
-            , ProjectName__c, ExternalId__c, Name , Status__c
-            , LastSyncDate__c, SynchronizationStatus__c
+        return [SELECT Id, 
+            ExternalId__c, 
+            StartDate__c, 
+            EndDate__c, 
+            Budget__c, 
+            ErrorMessage__c,
+            ProjectName__c,
+            Name, 
+            Status__c,
+            LastSyncDate__c,
+            SynchronizationStatus__c
             FROM Project__c 
             WHERE Id in :ids ];
     }
