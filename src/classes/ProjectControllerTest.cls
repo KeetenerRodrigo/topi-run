@@ -20,7 +20,7 @@ public with sharing class ProjectControllerTest {
 
         System.assert(createdProject != null);
         System.assert(createdProject.Id != null);
-        System.assertEquals(agileProject.externalId, createProject.ExternalId__c);
+        System.assertEquals(agileProject.externalId, createdProject.ExternalId__c);
     }
 
     @isTest
@@ -35,28 +35,31 @@ public with sharing class ProjectControllerTest {
         Test.stopTest();
 
         Integer responseCode = RestContext.response.statusCode;
-        String responsePayload = String.valueOf(RestContext.response.responseBody);
+        String responsePayload = RestContext.response.responseBody.toString();
 
         System.assertEquals(400, responseCode);
-        
     }
 
-    // @isTest
-    // public static void givenProjectIdWhenCallFindProjectServiceThenReturnSucessProjectInfo(){
-    //     RestContext.request = new RestRequest();
-    //     request.param = new Map<String,String>{ 'id' => };
-    //     RestContext.response = new RestResponse();
+    @isTest
+    public static void givenProjectIdWhenCallFindProjectServiceThenReturnSucessProjectInfo(){
+        Project__c project = ProjectFixtureFactory.createProject('Test', Date.today(), Date.today().addDays(10));
 
-    //     Test.startTest();
+        RestContext.request = new RestRequest();
+        RestContext.request.addParameter('id', '' + project.id);
+        RestContext.response = new RestResponse();
 
-    //     ProjectController.getProjects();
+        Test.startTest();
 
-    //     Test.stopTest();
+        ProjectController.getProjects();
 
-    //     Integer responseCode = RestContext.response.statuscode;
-    //     String responsePayLoad = String.valueOf(RestContext.response.responseBody);
+        Test.stopTest();
 
-    //     System.assertEquals(400, responseCode);
-        
-    // }
+        Integer responseCode = RestContext.response.statuscode;
+        String responsePayLoad = RestContext.response.responseBody.toString();
+
+        Project__c retriviedProject = (Project__c) JSON.deserialize(responsePayLoad, Project__c.class);
+
+        System.assertEquals(200, responseCode);
+        System.assertEquals(project.Id, retriviedProject.Id);
+    }
 }
