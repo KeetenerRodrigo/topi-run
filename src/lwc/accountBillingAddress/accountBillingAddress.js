@@ -11,7 +11,6 @@ export default class AccountBillingAddress extends LightningElement {
         this.billingAddress = {
             street: 'Rua John Doe',
             streetNumber: '123',
-            additionalInfo: 'Apto',
             zipCode: '15840000',
             city: 'Itajobi',
             state: 'SP'
@@ -21,4 +20,8 @@ export default class AccountBillingAddress extends LightningElement {
     connectedCallback() {}
 
     renderedCallback() {}
+
+    handleChangedAddress(event) {
+        this.billingAddress = event.detail;
+    }
 }

@@ -5,6 +5,15 @@ export default class EditAddress extends LightningElement {
     @api
     address;
 
+    set localAddress(address) {
+        this._address = Object.assign(address);
+        this.dispatchChangedAddress();
+    }
+
+    get localAddress() {
+        return this._address;
+    }
+
     constructor() {
         super();
         console.log('Run');
@@ -12,19 +21,34 @@ export default class EditAddress extends LightningElement {
         this.address = {
             street: 'Rua John Trê',
             streetNumber: '123',
-            additionalInfo: 'Apto',
             zipCode: '15840000',
             city: 'Itajobi',
             state: 'SP'
         }
     }
 
-    connectedCallback() {}
+    connectedCallback() {
+        this.localAddress = this.address;
+    }
 
     renderedCallback() {}
 
     handleSearchedAddress(event) {
-        console.log(event.detail);
         this.address = event.detail;
+        this.localAddress = event.detail;
+    }
+
+    dispatchChangedAddress() {
+        let changedAddressEvent = new CustomEvent('addresschanged', {
+            detail: this.localAddress
+        });
+
+        this.dispatchEvent(changedAddressEvent);
+    }
+
+    handleChange(event) {
+        this.localAddress = Object.assign(this.localAddress, {
+            [event.target.name]: event.target.name
+        });
     }
 }

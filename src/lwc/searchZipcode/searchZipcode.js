@@ -1,5 +1,7 @@
 import { api, LightningElement } from 'lwc';
 
+import searchAddress from '@salesforce/apex/SearchAddresCtrl.searchAddress';
+
 export default class SearchZipcode extends LightningElement {
 
     @api
@@ -15,23 +17,27 @@ export default class SearchZipcode extends LightningElement {
     renderedCallback() {}
 
     handleBlur(event) {
-        if (!event.target.value) {
+        if (!event.target.value || event.target.value == this.zipCode) {
             return;
         }
 
-        this.publishingAddressChanged();
+        const _zipCode = Object.assign(event.target.value.replace('-', ''));
+
+        searchAddress({ zipCode: _zipCode }).then(response => {
+            let data = response;
+
+            console.log(data);
+            this.publishingAddressChanged(data);
+        }).catch(response => {
+            let component = this.template.querySelector("[data-name='zipcode']");
+            component.setCustomValidity(response.body.message);
+            component.reportValidity();
+        });
     }
 
-    publishingAddressChanged() {
+    publishingAddressChanged(data) {
         let searchedAddressEvent = new CustomEvent('searchedaddress', {
-            detail: {
-                street: 'John Four',
-                streetNumber: '2020',
-                additionalInfo: 'Apto',
-                zipCode: '15840000',
-                city: 'Itajobi',
-                state: 'SP'
-            }
+            detail: data
         });
 
         this.dispatchEvent(searchedAddressEvent);
